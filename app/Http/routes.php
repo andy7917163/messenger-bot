@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/webhook', 'MessengerController@recive')->middleware('verify');
